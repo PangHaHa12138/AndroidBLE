@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+   		<ListView 
+   		    android:id="@+id/blelv"
+   		    android:layout_width="fill_parent"
+   		    android:layout_height="fill_parent"
+			android:layout_above="@+id/rlBottom"/>
+
+	<RelativeLayout android:id="@+id/rlBottom"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:background="#09eeeeee"
+		android:padding="10dp">
+
+		<TextView android:id="@+id/tvVersion"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="V 1.0.3"
+			android:textColor="@color/white"
+			android:layout_alignBottom="@+id/line2"/>
+
+		<LinearLayout
+			android:id="@+id/line2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:layout_centerInParent="true">
+			<ImageView
+				android:id="@+id/search_img"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/reloadbtn"
+				android:layout_gravity="center_horizontal"/>
+			<TextView android:id="@+id/restv"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="search again"
+				android:layout_marginTop="5dp"
+				android:layout_gravity="center_horizontal"
+				android:textColor="@color/cheng"/>
+		</LinearLayout>
+
+
+	</RelativeLayout>
+
+
+</RelativeLayout>

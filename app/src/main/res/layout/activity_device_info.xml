@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg">
+
+    <RelativeLayout android:id="@+id/rlTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/black">
+
+        <ImageView android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/left_r"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+
+        <TextView android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="设备信息"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:ellipsize="middle"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:paddingLeft="10dp"/>
+
+        <TextView android:id="@+id/tvVerUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="OTA升级"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:ellipsize="middle"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

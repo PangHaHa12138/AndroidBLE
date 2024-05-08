@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dp"
+    android:layout_gravity="center"  
+     >
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="30dp"       
+        android:gravity="center"
+        android:layout_height="30dp" />
+    <TextView 
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:text="正在连接..."
+        android:textSize="20sp"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        
+        />
+
+</LinearLayout>

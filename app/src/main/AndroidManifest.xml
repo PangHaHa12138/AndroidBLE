@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE "
+        tools:ignore="SystemPermissionTypo" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--蓝牙权限-->
+    <uses-permission android:name="android.permission.BLUETOOTH"
+        android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"
+        android:maxSdkVersion="30" />
+    <!--Android6以上 动态申请位置权限-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--Android12以上 申请蓝牙扫描，连接，广播权限-->
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <!--使用蓝牙低功耗BLE-->
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="false"/>
+
+
+    <application
+        android:name="BluetoothApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/img_app_logo"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".activity.DeviceScanActivity"
+            android:exported="true"
+            android:screenOrientation="fullSensor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.BluetoothservicesListview" />
+        <activity
+            android:name=".activity.BleViewPage"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activity.ReadWriteActivity" />
+        <activity android:name=".activity.OtaActiviy" />
+        <activity
+            android:name=".activity.SelectFileActivity"
+            android:screenOrientation="fullSensor" />
+        <activity android:name=".activity.LedctrActivity" />
+        <activity
+            android:name=".activity.TestDataActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activity.TRXActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activity.DeviceInfoActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activity.SetWorkActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".activity.OTAUpdateActivity"
+            android:screenOrientation="fullSensor" />
+
+    </application>
+
+</manifest>

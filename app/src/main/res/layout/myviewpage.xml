@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="vertical"
+    android:fillViewport="true"
+    android:fadeScrollbars="true" 
+  
+    >
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+     >
+  
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/opviewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        />
+	<LinearLayout
+	    	android:layout_width="fill_parent"
+	    	android:layout_height="60dp"
+	    	android:orientation="horizontal"
+	    	android:layout_alignParentBottom="true"
+	    	android:background="@drawable/mor"
+	    >
+	    <TextView 
+	        android:id="@+id/consoletv"
+	        android:layout_height="fill_parent"
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:text="Console"
+	        android:paddingLeft="15dp"
+	        android:gravity="center_vertical"
+	        android:textSize="17sp"
+	        android:textColor="#fff"
+	        android:background="@drawable/active"
+	        />
+	     <TextView 
+	        android:id="@+id/txrxtv"
+	        android:layout_height="fill_parent"
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:text="TX/Rx"
+	        android:paddingLeft="17dp"
+	        android:gravity="center_vertical"
+	        android:textSize="17sp"
+	        android:textColor="#fff"
+	        />
+	      <TextView 
+	        android:id="@+id/filetv"
+	        android:layout_height="fill_parent"
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:text="File"
+	        android:paddingLeft="27dp"
+	        android:gravity="center_vertical"
+	        android:textSize="17sp"
+	        android:textColor="#fff"
+	        />
+	       <TextView 
+	        android:id="@+id/abouttv"
+	        android:layout_height="fill_parent"
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:text="About"
+	        android:paddingLeft="23dp"
+            android:gravity="center_vertical"
+            android:textSize="17sp"
+            android:textColor="#fff"
+	        />
+	    </LinearLayout>
+</RelativeLayout>
+</ScrollView>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="red">#900</color>
+    <color name="green">#090</color>
+    <color name="blue">#38B8F8</color>
+    <color name="hui">#a7a8a9</color>
+    <color name="hei">#676A6F</color>
+    <color name="hong">#c8460d</color>
+    <color name="bai">#6F6E6D</color>
+    <color name="base_color">#18b4ed</color>
+    <color name="youdao_title_bg">#318ece</color>
+    <color name="half_transparent">#b0000000</color>
+    <color name="transparent_background">#00000000</color>
+    <color name="item_select">#EAEAEA</color>
+    <color name="gray_white">#10000000</color>
+    <color name="bg_color">#EDEDED</color>
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="help_button_view">#ffcccccc</color>
+    <color name="help_view">#ff404040</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="result_image_border">#ffffffff</color>
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c000ff00</color>
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="sbc_header_text">#ff808080</color>
+    <color name="sbc_header_view">#ffffffff</color>
+    <color name="sbc_list_item">#fffff0e0</color>
+    <color name="sbc_layout_view">#ffffffff</color>
+    <color name="sbc_page_number_text">#ff000000</color>
+    <color name="sbc_snippet_text">#ff4b4b4b</color>
+    <color name="share_text">#ff000000</color>
+    <color name="share_view">#ffffffff</color>
+    <color name="status_view">#50000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="header">#58567D</color>
+    <color name="grgray">#686868</color>
+
+    <color name="no_line">#555555</color>
+    <!-- <color name="no_line">#458843</color> -->
+    <color name="qing">#94D600</color>
+    <color name="text_qing">#2EBA2B</color>
+    <color name="hui_qing">#63AE11</color>
+    <color name="lv">#6CA729</color>
+
+    <color name="select_function_text">#2E79D9</color>
+    <color name="lan">#8EAFFC</color>
+    <color name="num_bg_p">#AACEF0</color>
+
+    <color name="title_bg_color">#EFEFF0</color>
+    <color name="text_normal_color">#AAAAAA</color>
+    <color name="text_blue_color">#26A5F5</color>
+
+    <color name="text_qian_lan">#50B7FA</color>
+    <color name="tou">#40EEEEEE</color>
+    <color name="cheng">#ff9d03</color>
+
+</resources>

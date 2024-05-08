@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_width="150dp"
+	android:layout_height="150dp" 
+	android:gravity="center"
+	android:background="@drawable/loading_bg"
+	>
+
+    <ProgressBar
+        android:id="@+id/loading_process_dialog_progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:layout_marginTop="15dp"
+        android:indeterminateDrawable="@drawable/loading" />
+
+	
+
+	
+	<TextView 
+	    android:id="@+id/precenttv"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="15dp"
+		android:layout_marginBottom="10dp"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp" 
+		android:textColor="#fff"
+		android:text="正在写入..." />
+	
+</LinearLayout>

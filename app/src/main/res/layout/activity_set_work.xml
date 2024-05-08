@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg">
+
+    <RelativeLayout android:id="@+id/rlTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/black">
+
+        <ImageView android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/left_r"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+
+        <TextView android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="参数设置"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:ellipsize="middle"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:paddingLeft="10dp"/>
+
+        <TextView android:id="@+id/tvRefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="刷新"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:ellipsize="middle"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout android:id="@+id/rlVersion"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/tou">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="软件版本："
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView android:id="@+id/tvVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:text="V 1.0"
+            android:layout_toLeftOf="@+id/imgRight"
+            android:layout_marginRight="10dp">
+        </TextView>
+
+        <ImageView android:id="@+id/imgRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            app:tint="@color/white" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/tou">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="MAC 地址："
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView android:id="@+id/tvMac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:text="AA:BB:CC:DD:EE:FF"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp">
+        </TextView>
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@color/tou">
+
+                <Button android:id="@+id/btnDefault"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="恢复默认"/>
+
+                <Button android:id="@+id/btnReStart"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="重启设备"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="所有设置，均在重启设备后，才能生效！(包括恢复默认)"
+                android:textColor="@color/white"
+                android:layout_marginTop="1dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/tou">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="蓝牙名称："
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="5dp"/>
+
+                <EditText android:id="@+id/edName"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/btnNameSet"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:maxLength="28"
+                    android:hint="蓝牙名称"
+                    android:singleLine="true"
+                    android:background="@drawable/bg_edittext_focused"/>
+
+                <Button android:id="@+id/btnNameSet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设置"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_centerVertical="true"/>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/tou">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="连接间隔："
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="5dp"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.25ms x"
+                    android:textColor="@color/white"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/edCONNI"
+                    android:layout_marginRight="5dp"/>
+
+                <EditText android:id="@+id/edCONNI"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/btnCONNISet"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:hint="6-3200"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:background="@drawable/bg_edittext_focused"/>
+
+                <Button android:id="@+id/btnCONNISet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设置"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_centerVertical="true"/>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/tou">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="广播间隔："
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="5dp"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="625us x"
+                    android:textColor="@color/white"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/edADVI"
+                    android:layout_marginRight="5dp"/>
+
+                <EditText android:id="@+id/edADVI"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/btnADVISet"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:hint="80-3200"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:background="@drawable/bg_edittext_focused"/>
+
+                <Button android:id="@+id/btnADVISet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设置"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_centerVertical="true"/>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/tou">
+                <TextView android:id="@+id/tvNei"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="广播数据："
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="5dp"/>
+
+                <EditText android:id="@+id/edADVData"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/tvNei"
+                    android:layout_toLeftOf="@+id/btnADVData"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:maxLength="32"
+                    android:textSize="12sp"
+                    android:hint="最大16个字节，十六进制形式"
+                    android:singleLine="true"
+                    android:background="@drawable/bg_edittext_focused"/>
+
+                <Button android:id="@+id/btnADVData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设置"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_centerVertical="true"/>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/tou">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="发射功率："
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="5dp"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_edittext_focused"
+                    android:layout_toLeftOf="@+id/btnRFPowerSet"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp">
+
+                    <Spinner android:id="@+id/spinnerPower"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:entries="@array/rfpower_table"
+                        android:gravity="center" />
+
+                </RelativeLayout>
+
+
+                <Button
+                    android:id="@+id/btnRFPowerSet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:text="设置" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/tou">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="串口波特率："
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="5dp"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_edittext_focused"
+                    android:layout_toLeftOf="@+id/btnBandSet"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp">
+
+                    <Spinner android:id="@+id/spinnerBand"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:entries="@array/band_table"
+                        android:gravity="center" />
+
+                </RelativeLayout>
+
+
+
+                <Button android:id="@+id/btnBandSet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设置"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="2dp"
+                android:background="@color/tou">
+
+                <Switch android:id="@+id/switchAutoSleep"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="自动休眠:"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5dp" />
+
+                <Switch android:id="@+id/switchPINBind"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="配对绑定:"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="10dp" />
+
+            </LinearLayout>
+
+            <RelativeLayout android:id="@+id/rlPINCode"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/tou">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="配对码："
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="5dp"/>
+
+                <EditText android:id="@+id/edPINCODE"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/btnPINCODE"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:hint="6位整数"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:background="@drawable/bg_edittext_focused"/>
+
+                <Button android:id="@+id/btnPINCODE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设置"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_centerVertical="true"/>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="2dp"
+                android:background="@color/tou">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="角色类型："
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="5dp"/>
+
+                <RadioGroup android:id="@+id/rgModelType"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <RadioButton android:id="@+id/rbAdmin"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="主机"
+                        android:textColor="@color/white"/>
+
+                    <RadioButton android:id="@+id/rbClient"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="从机"
+                        android:textColor="@color/white"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <RelativeLayout android:id="@+id/rlClientMAC"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/tou">
+                <TextView android:id="@+id/tvCong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="从机地址(MAC)："
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="5dp"/>
+
+                <EditText android:id="@+id/edPEERMAC"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/tvCong"
+                    android:layout_toLeftOf="@+id/btnPEERMAC"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:maxLength="12"
+                    android:hint="12位十六进制字符串"
+                    android:singleLine="true"
+                    android:background="@drawable/bg_edittext_focused"/>
+
+                <Button android:id="@+id/btnPEERMAC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设置"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_centerVertical="true"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/tou">
+                <TextView android:id="@+id/tvYan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="验证密码(访问权限)："
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="5dp"/>
+
+                <EditText android:id="@+id/edAUTHPWG"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/tvYan"
+                    android:layout_toLeftOf="@+id/btnAUTHPWG"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:maxLength="8"
+                    android:hint="8位字符串"
+                    android:singleLine="true"
+                    android:background="@drawable/bg_edittext_focused"/>
+
+                <Button android:id="@+id/btnAUTHPWG"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设置"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_centerVertical="true"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/tou">
+                <TextView android:id="@+id/tvJianGe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="重连间隔(单位:s 不重连:0)："
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="5dp"/>
+
+                <EditText android:id="@+id/edRECONNI"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/tvJianGe"
+                    android:layout_toLeftOf="@+id/btnRECONNI"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:maxLength="2"
+                    android:hint="0~60"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:background="@drawable/bg_edittext_focused"/>
+
+                <Button android:id="@+id/btnRECONNI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设置"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_centerVertical="true"/>
+
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="透传相关服务："
+                android:textColor="@color/white"
+                android:layout_marginTop="1dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/tou">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="透传服务(32个16进制数)："
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <EditText android:id="@+id/edUUIDS"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@+id/btnUUIDS"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:textSize="13sp"
+                        android:maxLength="32"
+                        android:hint="32个长度"
+                        android:singleLine="true"
+                        android:background="@drawable/bg_edittext_focused"/>
+
+                    <Button android:id="@+id/btnUUIDS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="设置"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Read特征，模块发，APP收(32个16进制数)："
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <EditText android:id="@+id/edUUIDR"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@+id/btnUUIDR"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:textSize="13sp"
+                        android:maxLength="32"
+                        android:hint="32个长度"
+                        android:singleLine="true"
+                        android:background="@drawable/bg_edittext_focused"/>
+
+                    <Button android:id="@+id/btnUUIDR"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="设置"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Write特征，APP发，模块收(32个16进制数)："
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="5dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <EditText android:id="@+id/edUUIDW"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@+id/btnUUIDW"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:textSize="13sp"
+                        android:maxLength="32"
+                        android:hint="32个长度"
+                        android:singleLine="true"
+                        android:background="@drawable/bg_edittext_focused"/>
+
+                    <Button android:id="@+id/btnUUIDW"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="设置"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
